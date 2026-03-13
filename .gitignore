@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local data artifacts
+data/raw/*.csv
+data/processed/
+
+# Generated outputs
+outputs/
