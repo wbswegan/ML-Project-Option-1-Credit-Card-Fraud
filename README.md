@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Credit Card Fraud Detection for Imbalanced Binary Classification
 
 ## 1. Project Title
@@ -104,3 +105,7 @@ Fill this section before submission:
 | Member B | Preprocessing and leakage prevention | _Add details_ |
 | Member C | Model training and evaluation | _Add details_ |
 | Member D | Report writing and presentation | _Add details_ |
+=======
+# ML-Project-Option-1-Credit-Card-Fraud
+ML Project Option 1
+>>>>>>> 7d6f90d43c15c4c8cb1734b5de8031f7ffa0bb94
