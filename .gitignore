@@ -1,13 +1,33 @@
+# Python cache and virtual environments
 __pycache__/
 *.pyc
 *.pyo
 .ipynb_checkpoints/
 .venv/
 venv/
+env/
 
-# Local data artifacts
-data/raw/*.csv
-data/processed/
+# Local data artifacts (keep folder skeletons only)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
 
-# Generated outputs
-outputs/
+# Generated outputs (keep folder skeletons only)
+outputs/*
+!outputs/.gitkeep
+!outputs/figures/
+!outputs/tables/
+!outputs/models/
+!outputs/metrics/
+!outputs/reports/
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/tables/*
+!outputs/tables/.gitkeep
+outputs/models/*
+!outputs/models/.gitkeep
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+outputs/reports/*
+!outputs/reports/.gitkeep
