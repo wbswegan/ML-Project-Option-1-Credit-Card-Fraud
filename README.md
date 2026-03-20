@@ -1,18 +1,19 @@
-<<<<<<< HEAD
 # Credit Card Fraud Detection for Imbalanced Binary Classification
 
 ## 1. Project Title
 Credit Card Fraud Detection for Imbalanced Binary Classification
 
 ## 2. Problem Statement
-Credit card fraud detection is a high-impact binary classification problem with severe class imbalance. The objective of this project is to build a reproducible machine learning pipeline that identifies fraudulent transactions while minimizing missed fraud cases. We compare a simple baseline model with a stronger tree-based model using fraud-relevant metrics.
+Credit card fraud detection is a high-impact binary classification problem with severe class imbalance. The objective of this project is to build a reproducible machine learning pipeline that identifies fraudulent transactions while minimizing missed fraud cases. A simple baseline model is compared with a stronger tree-based model using fraud-relevant evaluation metrics.
 
 ## 3. Dataset Source
-- **Dataset files used in this project**: `fraudTrain.csv`, `fraudTest.csv`
-- **Source**: Locally provided by the project team (already downloaded)
-- **Expected local paths**:
+- Dataset used: `fraudTrain.csv`, `fraudTest.csv`
+- Kaggle link: https://www.kaggle.com/datasets/kartik2112/fraud-detection
+- Local paths used by this project:
   - `data/raw/fraudTrain.csv`
   - `data/raw/fraudTest.csv`
+
+Note: This repository does not auto-download data. Please place the dataset files manually in `data/raw/`.
 
 ## 4. Repository Structure
 ```text
@@ -43,14 +44,14 @@ Credit card fraud detection is a high-impact binary classification problem with 
 ```bash
 pip install -r requirements.txt
 ```
-3. Ensure the local dataset files are placed in:
+3. Ensure dataset files are placed at:
 ```text
 data/raw/fraudTrain.csv
 data/raw/fraudTest.csv
 ```
 
 ## 6. How to Run EDA, Training, and Evaluation
-Run in the following order:
+Run in this order:
 ```bash
 python src/eda.py
 python src/data_preprocessing.py
@@ -72,10 +73,10 @@ python src/evaluate.py --data-path path/to/data/raw
 ```
 
 ## 7. Models Used
-- **Baseline**: Logistic Regression (`class_weight='balanced'`)
-- **Improved**: Random Forest (`class_weight='balanced_subsample'`)
+- Baseline: Logistic Regression (`class_weight='balanced'`)
+- Improved: Random Forest (`class_weight='balanced_subsample'`)
 
-Both models are evaluated on the same stratified holdout split to ensure fair comparison.
+Both models are evaluated on the same stratified holdout split for fair comparison.
 
 ## 8. Key Results
 Primary result files:
@@ -85,27 +86,13 @@ Primary result files:
 - `outputs/figures/*_confusion_matrix.png`
 - `outputs/tables/evaluation_interpretation.md`
 
-Report guidance:
-- Use **recall** and **F1-score** as primary criteria due to class imbalance.
-- Treat **accuracy** as secondary, since high accuracy can occur even when fraud detection is poor.
-- Use confusion matrices and ROC comparison to explain the precision-recall tradeoff in operational terms.
+Interpretation focus:
+- Recall and F1-score are prioritized under class imbalance.
+- Accuracy is secondary because it can be misleading in fraud detection.
+- Confusion matrices and ROC curves are used to explain the precision-recall tradeoff.
 
 ## 9. Limitations
-- Dataset is highly imbalanced, which can still bias learning despite class-weighted models.
-- Current setup uses fixed model configurations; no extensive hyperparameter search is included.
+- The dataset is highly imbalanced, which can still bias learning despite imbalance-aware settings.
+- The current setup uses fixed model configurations rather than extensive hyperparameter search.
 - Performance is evaluated on one dataset setting; external generalization is not guaranteed.
-- Cost-sensitive thresholds are not fully optimized for a specific business workflow.
-
-## 10. Team Contribution Placeholder
-Fill this section before submission:
-
-| Team Member | Responsibilities | Contribution Summary |
-|---|---|---|
-| Member A | EDA, data quality checks | _Add details_ |
-| Member B | Preprocessing and leakage prevention | _Add details_ |
-| Member C | Model training and evaluation | _Add details_ |
-| Member D | Report writing and presentation | _Add details_ |
-=======
-# ML-Project-Option-1-Credit-Card-Fraud
-ML Project Option 1
->>>>>>> 7d6f90d43c15c4c8cb1734b5de8031f7ffa0bb94
+- Thresholds are not fully tuned for a specific business cost function.
